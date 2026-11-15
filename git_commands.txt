@@ -1,0 +1,40 @@
+GIT COMMANDS USED IN THIS ASSIGNMENT
+
+mkdir git-assignment && cd git-assignment
+    Make the project folder and go into it.
+git init -b main
+    Make a new local Git repository. The first branch is named main.
+git status
+    Show which files are new, changed or staged.
+git add index.html about.html
+    Put the two HTML files in the staging area for the next commit.
+git commit -s -m "message"
+    Save the staged files as a commit. The -s option adds a Signed-off-by line.
+git commit -a -s -m "message"
+    Stage all changes to tracked files and commit them in one step.
+git diff
+    Show the changes that are not yet staged.
+git branch feature
+    Make a new branch named feature.
+git switch feature
+    Move to the feature branch.
+git branch
+    List the local branches. The current branch has a star.
+git switch main
+    Move back to the main branch.
+git merge --no-ff feature -m "message"
+    Merge feature into main. The --no-ff option always makes a merge commit, so the branch stays visible in the history.
+git log --oneline --graph --all --decorate
+    Show the commit history as a short graph with all branches and labels.
+cat .gitignore
+    Show the ignore rules (*.log and temp/).
+git reset --hard HEAD~1
+    Undo the last commit. HEAD moves back one commit and the working files return to that state.
+git remote add origin https://github.com/marvelxcodes/git-assignment.git
+    Connect the local repository to the GitHub repository named origin.
+git push -u origin main
+    Send the main branch to GitHub and set it as the default upstream branch.
+git push origin feature
+    Send the feature branch to GitHub.
+gh repo create git-assignment --public
+    Make a public repository on GitHub with the GitHub CLI.
